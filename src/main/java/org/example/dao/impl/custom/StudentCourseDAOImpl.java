@@ -65,7 +65,7 @@ public class StudentCourseDAOImpl implements StudentCourseDAO {
         String nextId = "";
 
         try {
-            Object item = session.createQuery("SELECT student_course_id FROM Student_Course ORDER BY student_course_id DESC")
+            Object item = session.createQuery("SELECT student_course_id FROM StudentCourse ORDER BY student_course_id DESC")
                     .setMaxResults(1)
                     .uniqueResult();
 

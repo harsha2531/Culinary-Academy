@@ -8,87 +8,70 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="999.0" style="-fx-background-color: #E4C087;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.StudentRegisterController">   <!-- Combo Boxes for Student ID and Course ID -->
-    <ComboBox fx:id="cmbStudentPhoneNumber" layoutX="336.0" layoutY="102.0" onAction="#cmbStudentOnAction" prefWidth="200.0" promptText="Select Student Contact" />
-    <ComboBox fx:id="cmbCourseName" layoutX="30.0" layoutY="102.0" onAction="#cmbCourseOnAction" prefWidth="200.0" promptText="Select Course Name" />
+<AnchorPane prefHeight="545.0" prefWidth="1290.0" style="-fx-background-color: #FFEBD4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.StudentRegisterController">
 
-    <!-- Labels for Student and Course Details -->
-    <Label layoutX="30.0" layoutY="169.0" text="Student Name :">
+    <!-- Title -->
+    <Label layoutX="480.0" layoutY="14.0" style="-fx-text-fill: black;" text="Student Registration">
         <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="338.0" layoutY="168.0" text="Student ID :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="30.0" layoutY="218.0" text="Course ID :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="338.0" layoutY="217.0" text="Fee :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="335.0" layoutY="267.0" text="Payment ID :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="28.0" layoutY="318.0" text="Date :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label layoutX="336.0" layoutY="319.0" text="Student Course ID :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-
-    <!-- Buttons for CRUD Operations -->
-    <Button fx:id="btnAdd" layoutX="751.0" layoutY="128.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Add">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Button>
-    <Button fx:id="btnUpdate" layoutX="751.0" layoutY="192.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Update">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Button>
-    <Button fx:id="btnDelete" layoutX="751.0" layoutY="251.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Delete">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Button>
-    <Button fx:id="btnClear" layoutX="751.0" layoutY="313.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #607D8B; -fx-text-fill: white;" text="Clear">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Button>
-
-    <!-- Table View for Student Course Information -->
-    <TableView fx:id="tblStudentCourse" layoutX="28.0" layoutY="377.0" prefHeight="200.0" prefWidth="938.0">
-        <columns>
-            <TableColumn fx:id="colStudentId" prefWidth="279.0" text="Student ID" />
-            <TableColumn fx:id="colCourseId" prefWidth="288.0" text="Course ID" />
-            <TableColumn fx:id="colDate" prefWidth="190.0" text="Date" />
-            <TableColumn fx:id="colStudentCourseId" prefWidth="207.0" text="Student Course ID" />
-        </columns>
-    </TableView>
-    <Label fx:id="lblStudentName1" layoutX="166.0" layoutY="80.0" />
-    <Label fx:id="lblStudentID" layoutX="166.0" layoutY="110.0" />
-    <Label fx:id="lblCourseID" layoutX="166.0" layoutY="140.0" />
-    <Label fx:id="lblFee1" layoutX="166.0" layoutY="170.0" />
-    <Label fx:id="lblPaymentId1" layoutX="166.0" layoutY="227.0" />
-    <Label fx:id="lblDate1" layoutX="166.0" layoutY="256.0" />
-    <Label fx:id="lblStudentCourseId1" layoutX="166.0" layoutY="284.0" />
-    <Label layoutX="638.0" layoutY="26.0" text="Student Register">
-        <font>
-            <Font name="System Bold" size="34.0" />
+            <Font name="Arial Bold" size="36.0" />
         </font>
     </Label>
-    <Button fx:id="btnBack" layoutX="28.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: grey;" text="&lt; Back">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Button>
-    <Label layoutX="28.0" layoutY="267.0" text="Duration :">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font></Label>
-    <Label fx:id="lblDuration" layoutX="166.0" layoutY="263.0" prefHeight="26.0" prefWidth="146.0" style="-fx-border-color: white;" />
+
+    <!-- Combo Boxes for Student ID and Course ID -->
+    <ComboBox fx:id="cmbStudentPhoneNumber" layoutX="28.0" layoutY="82.0" onAction="#cmbStudentOnAction" prefHeight="37.0" prefWidth="227.0" promptText="Select Student Contact" style="-fx-font-size: 16px;" />
+    <ComboBox fx:id="cmbCourseName" layoutX="318.0" layoutY="82.0" onAction="#cmbCourseOnAction" prefHeight="38.0" prefWidth="210.0" promptText="Select Course Name" style="-fx-font-size: 16px;" />
+
+    <!-- Labels for Student and Course Details -->
+    <Label layoutX="30.0" layoutY="160.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Student Name:" />
+    <Label fx:id="lblStudentName1" layoutX="200.0" layoutY="160.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="200.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Student ID:" />
+    <Label fx:id="lblStudentID" layoutX="200.0" layoutY="200.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="240.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Course ID:" />
+    <Label fx:id="lblCourseID" layoutX="200.0" layoutY="240.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="280.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Fee:" />
+    <Label fx:id="lblFee1" layoutX="200.0" layoutY="280.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="320.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Payment ID:" />
+    <Label fx:id="lblPaymentId1" layoutX="200.0" layoutY="320.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="360.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Date:" />
+    <Label fx:id="lblDate1" layoutX="200.0" layoutY="360.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="400.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Student Course ID:" />
+    <Label fx:id="lblStudentCourseId1" layoutX="200.0" layoutY="400.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <Label layoutX="30.0" layoutY="440.0" style="-fx-text-fill: black; -fx-font-size: 18px;" text="Duration:" />
+    <Label fx:id="lblDuration" layoutX="200.0" layoutY="440.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;" />
+
+    <!-- Action Buttons -->
+    <Button fx:id="btnAdd" layoutX="28.0" layoutY="492.0" onAction="#btnAddOnAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #06D001; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="Add">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Button>
+    <Button fx:id="btnUpdate" layoutX="161.0" layoutY="491.0" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #FF7D29; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="Update" />
+    <Button fx:id="btnDelete" layoutX="290.0" layoutY="491.0" onAction="#btnDeleteOnAction" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="Delete" />
+    <Button fx:id="btnClear" layoutX="467.0" layoutY="492.0" onAction="#btnClearOnAction" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #008DDA; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="Clear">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+
+    <!-- TableView -->
+    <TableView fx:id="tblStudentCourse" layoutX="543.0" layoutY="178.0" prefHeight="232.0" prefWidth="688.0" style="-fx-background-color: white; -fx-border-color: #bdbdbd; -fx-font-size: 16px;">
+        <columns>
+            <TableColumn fx:id="colStudentId" prefWidth="163.20001220703125" text="Student ID" />
+            <TableColumn fx:id="colCourseId" prefWidth="167.2000732421875" text="Course ID" />
+            <TableColumn fx:id="colDate" prefWidth="168.80010986328125" text="Date" />
+            <TableColumn fx:id="colStudentCourseId" prefWidth="188.7999267578125" text="Student Course ID" />
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button fx:id="btnBack" layoutX="40.0" layoutY="26.0" onAction="#btnBackOnAction" prefWidth="100.0" style="-fx-background-color: #81689D; -fx-text-fill: white; -fx-font-size: 16px;" text="Back">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
 
 </AnchorPane>

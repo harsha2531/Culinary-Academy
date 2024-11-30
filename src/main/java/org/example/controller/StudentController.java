@@ -126,15 +126,22 @@ public class StudentController {
         if (position.equals("Admin")) {
             btnBack.setDisable(false);
             btnClear.setDisable(false);
-            btnAdd.setDisable(true);
-            btnUpdate.setDisable(true);
-            btnDelete.setDisable(true);
+            btnAdd.setDisable(false);
+            btnUpdate.setDisable(false);
+            btnDelete.setDisable(false);
 
         } else if (position.equals("Admissions Coordinator")) {
             btnAdd.setDisable(false);
             btnUpdate.setDisable(false);
             btnDelete.setDisable(false);
             btnBack.setDisable(false);
+            btnClear.setDisable(false);
+        }
+        else {
+            btnAdd.setDisable(true);
+            btnUpdate.setDisable(true);
+            btnDelete.setDisable(true);
+            btnBack.setDisable(true);
             btnClear.setDisable(false);
         }
     }
@@ -212,7 +219,7 @@ public class StudentController {
                 boolean isSave = studentBO.save(studentDTO);
 
                 if (isSave){
-                    new Alert(Alert.AlertType.CONFIRMATION, "User saved successfully!").show();
+                    new Alert(Alert.AlertType.CONFIRMATION, "Student saved successfully!").show();
                     clear();
                     loadAll();
                     generateNextId();
@@ -220,7 +227,7 @@ public class StudentController {
                 }
             }
             else {
-                new Alert(Alert.AlertType.ERROR, "User not saved successfully!").show();
+                new Alert(Alert.AlertType.ERROR, "Student not saved successfully!").show();
             }
 
         } catch (Exception e) {

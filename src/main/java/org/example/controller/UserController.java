@@ -116,17 +116,25 @@ public class UserController {
         User user = userBO.searchByIdUser(ID);
         String position = user.getPosition();
 
-        if ("Admin".equals(position)) {
+        if (position.equals("Admin")) {
             btnBack.setDisable(false);
             btnClear.setDisable(false);
-            btnAdd.setDisable(true);
-            btnUpdate.setDisable(true);
-            btnDelete.setDisable(true);
-        } else if ("Admissions Coordinator".equals(position)) {
+            btnAdd.setDisable(false);
+            btnUpdate.setDisable(false);
+            btnDelete.setDisable(false);
+
+        } else if (position.equals("Admissions Coordinator")) {
             btnAdd.setDisable(false);
             btnUpdate.setDisable(false);
             btnDelete.setDisable(false);
             btnBack.setDisable(false);
+            btnClear.setDisable(false);
+        }
+        else {
+            btnAdd.setDisable(true);
+            btnUpdate.setDisable(true);
+            btnDelete.setDisable(true);
+            btnBack.setDisable(true);
             btnClear.setDisable(false);
         }
     }

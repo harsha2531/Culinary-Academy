@@ -157,14 +157,13 @@ public class StudentRegisterController {
         }
     }
 
-    /*login table eke log una last kenage user id ek aragannw*/
+
     private void lastLoginID() throws SQLException, ClassNotFoundException {
         Login login = loginDAO.getLastLogin();
         UserID(login.getUserID());
 
     }
 
-    /*Access denn security ekak danamw*/
     public void UserID(String ID) throws SQLException, ClassNotFoundException {
         String UserID = ID;
         User user = userBO.searchByIdUser(UserID);
@@ -173,15 +172,22 @@ public class StudentRegisterController {
         if (position.equals("Admin")) {
             btnBack.setDisable(false);
             btnClear.setDisable(false);
-            btnAdd.setDisable(true);
-            btnUpdate.setDisable(true);
-            btnDelete.setDisable(true);
+            btnAdd.setDisable(false);
+            btnUpdate.setDisable(false);
+            btnDelete.setDisable(false);
 
         } else if (position.equals("Admissions Coordinator")) {
             btnAdd.setDisable(false);
             btnUpdate.setDisable(false);
             btnDelete.setDisable(false);
             btnBack.setDisable(false);
+            btnClear.setDisable(false);
+        }
+        else {
+            btnAdd.setDisable(true);
+            btnUpdate.setDisable(true);
+            btnDelete.setDisable(true);
+            btnBack.setDisable(true);
             btnClear.setDisable(false);
         }
     }

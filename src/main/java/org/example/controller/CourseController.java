@@ -105,15 +105,22 @@ public class CourseController {
         if (position.equals("Admin")) {
             btnBack.setDisable(false);
             btnClear.setDisable(false);
-            btnAdd.setDisable(true);
-            btnUpdate.setDisable(true);
-            btnDelete.setDisable(true);
+            btnAdd.setDisable(false);
+            btnUpdate.setDisable(false);
+            btnDelete.setDisable(false);
 
         } else if (position.equals("Admissions Coordinator")) {
             btnAdd.setDisable(false);
             btnUpdate.setDisable(false);
             btnDelete.setDisable(false);
             btnBack.setDisable(false);
+            btnClear.setDisable(false);
+        }
+        else {
+            btnAdd.setDisable(true);
+            btnUpdate.setDisable(true);
+            btnDelete.setDisable(true);
+            btnBack.setDisable(true);
             btnClear.setDisable(false);
         }
     }

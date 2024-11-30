@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="506.0" prefWidth="831.0" style="-fx-background-color: #E4C087;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
+<AnchorPane prefHeight="506.0" prefWidth="831.0" style="-fx-background-color: #FFEBD4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
     <children>
         <TableView fx:id="tblPaymentHistory" layoutX="47.0" layoutY="124.0" prefHeight="330.0" prefWidth="754.0">
             <columns>
-                <TableColumn fx:id="colPayID" prefWidth="153.60003280639648" text="ID" />
-                <TableColumn fx:id="colStudent_courseID" prefWidth="159.2000274658203" text="Student_Course ID" />
-                <TableColumn fx:id="colDate" prefWidth="221.5999755859375" text="Date" />
-                <TableColumn fx:id="colFee" prefWidth="223.2000732421875" text="Course Fee" />
+                <TableColumn fx:id="colPayID" prefWidth="172.00002670288086" text="ID" />
+                <TableColumn fx:id="colStudent_courseID" prefWidth="176.79994201660156" text="Student_Course ID" />
+                <TableColumn fx:id="colDate" prefWidth="209.5999755859375" text="Date" />
+                <TableColumn fx:id="colFee" prefWidth="203.20001220703125" text="Course Fee" />
             </columns>
         </TableView>
-        <Label layoutX="279.0" layoutY="28.0" prefHeight="50.0" prefWidth="273.0" text="Payment History">
+        <Label layoutX="287.0" layoutY="27.0" prefHeight="50.0" prefWidth="273.0" text="Payment History">
             <font>
                 <Font name="System Bold" size="34.0" />
             </font>
         </Label>
-        <Button fx:id="btnBack" layoutX="22.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: grey;" text="&lt; Back">
+        <Button fx:id="btnBack" layoutX="45.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #81689D;" text="Back" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Button>

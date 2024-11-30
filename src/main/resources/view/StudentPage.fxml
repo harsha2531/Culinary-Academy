@@ -9,81 +9,81 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1400.0" style="-fx-background-color: #E4C087;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.StudentController">
+<AnchorPane prefHeight="600.0" prefWidth="1050.0" style="-fx-background-color: #FFEBD4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.StudentController">
 
     <!-- Header Label -->
-    <Label layoutX="543.0" layoutY="34.0" prefHeight="50.0" prefWidth="314.0" text="- Student Manage -">
+    <Label layoutX="454.0" layoutY="24.0" prefHeight="50.0" prefWidth="314.0" text="Student Manage">
         <font>
             <Font name="System Bold" size="34.0" />
         </font>
     </Label>
 
     <!-- Back Button -->
-    <Button fx:id="btnBack" layoutX="31.0" layoutY="34.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: grey; -fx-text-fill: white;" text="&lt; Back">
+    <Button fx:id="btnBack" layoutX="71.0" layoutY="33.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #81689D; -fx-text-fill: white;" text="Back">
         <font>
             <Font name="System Bold" size="15.0" />
         </font></Button>
 
     <!-- Labels and Input Fields -->
-    <Label layoutX="14.0" layoutY="201.0" text="Student ID :">
+    <Label layoutX="155.0" layoutY="201.0" text="Student ID :">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Label>
 
-    <Label layoutX="15.0" layoutY="251.0" text="Name :">
+    <Label layoutX="669.0" layoutY="201.0" text="Name :">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Label>
-    <TextField fx:id="txtName" layoutX="137.0" layoutY="245.0" prefHeight="31.0" prefWidth="171.0" promptText="Enter Name" />
+    <TextField fx:id="txtName" layoutX="732.0" layoutY="195.0" onKeyTyped="#Name" prefHeight="31.0" prefWidth="171.0" promptText="Enter Name" />
 
-    <Label layoutX="16.0" layoutY="299.0" text="Phone Number :">
+    <Label layoutX="125.0" layoutY="265.0" text="Phone Number :">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Label>
-    <TextField fx:id="txtPhoneNumber" layoutX="136.0" layoutY="293.0" prefHeight="31.0" prefWidth="171.0" promptText="Enter Phone Number" />
+    <TextField fx:id="txtPhoneNumber" layoutX="255.0" layoutY="259.0" onKeyTyped="#Phone" prefHeight="31.0" prefWidth="171.0" promptText="Enter Phone Number" />
 
-    <Label layoutX="17.0" layoutY="342.0" text="Email :">
+    <Label layoutX="672.0" layoutY="265.0" text="Email :">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Label>
-    <TextField fx:id="txtEmail" layoutX="136.0" layoutY="336.0" prefHeight="31.0" prefWidth="171.0" promptText="Enter Email" />
+    <TextField fx:id="txtEmail" layoutX="732.0" layoutY="259.0" onKeyTyped="#Email" prefHeight="31.0" prefWidth="171.0" promptText="Enter Email" />
 
-    <Label layoutX="17.0" layoutY="385.0" text="Address :">
+    <Label layoutX="169.0" layoutY="327.0" text="Address :">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Label>
-    <TextField fx:id="txtAddress" layoutX="135.0" layoutY="379.0" prefHeight="31.0" prefWidth="171.0" promptText="Enter Address" />
+    <TextField fx:id="txtAddress" layoutX="255.0" layoutY="316.0" onKeyTyped="#Address" prefHeight="31.0" prefWidth="171.0" promptText="Enter Address" />
 
     <!-- Action Buttons -->
-    <Button fx:id="btnAdd" layoutX="80.0" layoutY="477.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Add">
+    <Button fx:id="btnAdd" layoutX="562.0" layoutY="327.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #06D001; -fx-text-fill: white;" text="Add">
         <font>
             <Font name="System Bold" size="15.0" />
         </font></Button>
-    <Button fx:id="btnUpdate" layoutX="17.0" layoutY="533.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Update">
+    <Button fx:id="btnUpdate" layoutX="714.0" layoutY="327.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #FF7D29; -fx-text-fill: white;" text="Update">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btnDelete" layoutX="118.0" layoutY="533.0" onAction="#btnDeleteOnAction" prefWidth="74.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Delete">
+    <Button fx:id="btnDelete" layoutX="866.0" layoutY="327.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Delete">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btnClear" layoutX="218.0" layoutY="534.0" onAction="#btnClearOnAction" prefWidth="74.0" style="-fx-background-color: #607D8B; -fx-text-fill: white;" text="Clear">
+    <Button fx:id="btnClear" layoutX="866.0" layoutY="111.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #008DDA; -fx-text-fill: white;" text="Clear">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
 
     <!-- Table View for Displaying Student Details -->
-    <TableView fx:id="tblStudents" layoutX="354.0" layoutY="160.0" prefHeight="404.0" prefWidth="1006.0">
+    <TableView fx:id="tblStudents" layoutX="102.0" layoutY="388.0" prefHeight="190.0" prefWidth="846.0">
         <columns>
             <TableColumn fx:id="colStudentID" prefWidth="111.99996948242188" text="Student ID" />
             <TableColumn fx:id="colName" prefWidth="176.79998779296875" text="Name" />
             <TableColumn fx:id="colPhoneNumber" prefWidth="172.0" text="Phone Number" />
-            <TableColumn fx:id="colEmail" prefWidth="243.2000732421875" text="Email" />
-            <TableColumn fx:id="colAddress" prefWidth="167.20001220703125" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="191.20001220703125" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="220.7999267578125" text="Address" />
             <TableColumn fx:id="colUserID" prefWidth="136.800048828125" text="UserID" />
         </columns>
     </TableView>
-    <Label fx:id="lblStudentID" layoutX="137.0" layoutY="195.0" prefHeight="31.0" prefWidth="171.0" style="-fx-border-color: white;" />
-    <ComboBox fx:id="cmbUser" layoutX="17.0" layoutY="129.0" onAction="#cmbUserOnAction" prefHeight="30.0" prefWidth="206.0" promptText="USER ID" />
+    <Label fx:id="lblStudentID" layoutX="255.0" layoutY="195.0" prefHeight="31.0" prefWidth="171.0" style="-fx-border-color: white;" />
+    <ComboBox fx:id="cmbUser" layoutX="155.0" layoutY="111.0" onAction="#cmbUserOnAction" prefHeight="30.0" prefWidth="206.0" promptText="USER ID" />
 
 </AnchorPane>
