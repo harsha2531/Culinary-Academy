@@ -2,8 +2,6 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.example.entity.StudentCourse;
-
 import java.sql.Date;
 
 @Entity

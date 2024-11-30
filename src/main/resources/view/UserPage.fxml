@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="546.0" prefWidth="1100.0" style="-fx-background-color: #FFEBD4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserController">
 
     <!-- Header Label -->
-    <Label layoutX="385.0" layoutY="-3.0" prefHeight="77.0" prefWidth="330.0" style="-fx-font-weight: bold;" text="User Manage">
+    <Label layoutX="525.0" layoutY="-3.0" prefHeight="77.0" prefWidth="330.0" style="-fx-font-weight: bold;" text="User Manage">
         <font>
             <Font name="System Bold" size="32.0" />
         </font></Label>
